@@ -1,0 +1,102 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/select_panel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFCDD2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hint_panel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="4">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cae"
+            android:textSize="30sp"
+            android:layout_gravity="center"/>
+        <GridLayout
+            android:id="@+id/letter_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:rowCount="6"
+            android:alignmentMode="alignMargins"
+            android:padding="16dp"
+            android:layout_marginTop="20dp">
+            <!-- Buttons will be added here programmatically -->
+        </GridLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/hint_panel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#C8E6C9"
+        app:layout_constraintStart_toEndOf="@+id/select_panel"
+        app:layout_constraintEnd_toStartOf="@+id/hangman_panel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            tools:ignore="UselessParent">
+            <Button
+                android:id="@+id/hint_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_button"
+                android:layout_gravity="center"/>
+            <Button
+                android:id="@+id/new_game_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_game_button"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/hangman_panel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#A9A3E2"
+        app:layout_constraintStart_toEndOf="@+id/hint_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="2">
+        <ImageView
+            android:id="@+id/hangmanImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description" />
+        <TextView
+            android:id="@+id/puzzle_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/hint_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

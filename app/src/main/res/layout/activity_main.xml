@@ -1,0 +1,62 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/hangman_panel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#FFCDD2"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/select_panel"
+    app:layout_constraintVertical_weight="1">
+        <ImageView
+            android:id="@+id/hangmanImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description" />
+        <TextView
+            android:id="@+id/puzzle_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select_panel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#C8E6C9"
+    app:layout_constraintTop_toBottomOf="@+id/hangman_panel"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_weight="2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cae"
+            android:textSize="30sp"/>
+        <GridLayout
+            android:id="@+id/letter_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="7"
+            android:alignmentMode="alignMargins"
+            android:padding="16dp"
+            android:layout_marginTop="20dp">
+            <!-- Buttons will be added here programmatically -->
+        </GridLayout>
+        <Button
+            android:id="@+id/new_game_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_game_button"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

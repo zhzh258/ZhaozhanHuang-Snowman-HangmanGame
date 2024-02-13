@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HangmanGame</string>
+    <string name="cae">CHOOSE A LETTER</string>
+    <string name="hint">Hint: It is a fruit</string>
+    <string name="image_description">This is an image showing the hangman</string>
+    <string name="new_game_button">Restart</string>
+    <string name="hint_button">Hint!</string>
+    <string name="no_more_hint">Hint not available</string>
+    <string name="game_over">Game over --- Try again</string>
+    <string name="gg">You win</string>
+</resources>
